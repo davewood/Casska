@@ -1,3 +1,6 @@
+Casska is an experimental project that gets data
+from a Kafka messagequeue and writes into a Cassandra database.
+
 ##################################
 # config file ( etc/config.ini ) #
 ##################################
