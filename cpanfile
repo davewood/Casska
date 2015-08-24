@@ -1,0 +1,10 @@
+requires 'DBI';
+requires 'DBD::Cassandra';
+requires 'Moo';
+requires 'namespace::clean';
+requires 'DateTime';
+requires 'DateTime::Format::ISO8601';
+requires 'Scalar::Util';
+requires 'Try::Tiny';
+requires 'Kafka';
+requires 'Config::Tiny';

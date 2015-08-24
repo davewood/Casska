@@ -1,0 +1,28 @@
+##################################
+# config file ( etc/config.ini ) #
+##################################
+
+[source]
+host  = mykafkahost
+topic = mytopic
+
+[store]
+host     = mycassandrahost
+keyspace = mykeyspace
+query    = INSERT INTO casska.mytable (ts, client) VALUES (?,?)
+username = mycassandrauser 
+password = mycassandrapw
+
+
+####################
+# cassandra schema #
+####################
+
+CREATE KEYSPACE casska
+     WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
+
+CREATE TABLE casska.mytable (
+    ts                TIMESTAMP,
+    client            TEXT,
+    PRIMARY KEY (ts)
+);
